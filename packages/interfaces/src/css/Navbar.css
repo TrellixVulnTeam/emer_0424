@@ -1,0 +1,38 @@
+.ant-layout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  color: #fff;
+  background: #7dbcea;
+}
+
+.ulIzquierda{
+    float: left;
+    list-style: none;
+    display: flex;
+  }
+  
+  .ulDerecha{
+    float: right; 
+    list-style: none;
+    display: flex;
+    padding-right: 30px;
+  }
+  
+  .imagenNavbar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .tituloNavbar{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .iconoMenu{
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+  }

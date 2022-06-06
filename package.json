@@ -7,6 +7,18 @@
   "workspaces":{
     "packages": ["packages/*"]
   },"scripts": {
-    "prepare": "husky install"
+    "bootstrap": "lerna bootstrap",
+    "test": "lerna run test --no-bail --stream",
+    "start": "lerna exec --scope @emer/website -- yarn start",
+    "build": "lerna run build",
+    "lint": "lerna run test:lint --no-bail --stream",
+    "prepare": "husky install",
+    "bootstrap:clean": "node ./removeYarnLock.js && lerna bootstrap",
+    "rebuild": "node ./rebuild.js && yarn bootstrap:clean",
+    "build:route": "lerna run build --scope @bapro/route-mapping --include-dependencies",
+    "cp": "node ./copyEnv.js",
+    "versionado": "node ./updateVersion.js",
+    "kill": "lerna run kill:port",
+    "page": "lerna run page"
   }
 }
